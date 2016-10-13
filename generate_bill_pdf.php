@@ -28,7 +28,7 @@ $pdf->AddPage();
 //First table: put all columns automatically
 $PDF_LOC="BILL_INVOICE_Room_".$rnum."_".date('d-M-y_h-i-s').".pdf";
 $FILE_PATH="dbfile/".$PDF_LOC;
-$pdf->Table('select date,title,rate,qty,amount from bill_info');
+$pdf->Table('select date,title,rate,qty,amount from bill_info where rnum=$rnum');
 
 $pdf->Output($FILE_PATH,'F');
 return $PDF_LOC;
