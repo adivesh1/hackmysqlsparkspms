@@ -198,25 +198,33 @@ $response = json_decode($json_response, true);
 		  die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
 	 }
 }
-/***************************************************************************									 *
- * Function to Send Message with attachment in Spark Room                                    *              
- *                                                                         *
- ***************************************************************************/
-function send_attachment_in_spark_room($spark_room_title,$msg,$attachment)
-{
+/***************************************************************************
+ *
+ *
+ *
+ *
+ ****************************************************************************/
 function curPageURL()
 {	
 $isHTTPS = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on");	
  $port = (isset($_SERVER["SERVER_PORT"]) && ((!$isHTTPS && $_SERVER["SERVER_PORT"] != "80")
                                              || ($isHTTPS && $_SERVER["SERVER_PORT"] != "443")));
  $port = ($port) ? ':'.$_SERVER["SERVER_PORT"] : '';	
- $url = ($isHTTPS ? 'https://' : 'http://').$_SERVER["SERVER_NAME"].$port.$_SERVER["REQUEST_URI"]; 	return $url;
-} 
+ $url = ($isHTTPS ? 'https://' : 'http://').$_SERVER["SERVER_NAME"].$port.$_SERVER["REQUEST_URI"]; 
+ return $url;
+}
 
+/***************************************************************************									 *
+ * Function to Send Message with attachment in Spark Room                                    *              
+ *                                                                         *
+ ***************************************************************************/
+function send_attachment_in_spark_room($spark_room_title,$msg,$attachment)
+{	
+ 
 $URL=curPageURL();
-
+echo $URL;
 $filename=$URL."/"."dbfile/".$attachment;/*Creating http link*/
-
+echo $filename;
 echo 
 $data = array(    "roomId" => $spark_room_title,   
                   'files' => $filename     );  
@@ -236,7 +244,6 @@ curl_close($curl);$response = json_decode($json_response, true);
 if ( $status == 200 ) {  
  
  echo "File Send Successfully!!";
-     header("location:billing_home.php");
 }else{
 	die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
 }	

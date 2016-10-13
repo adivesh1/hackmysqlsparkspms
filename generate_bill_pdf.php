@@ -26,7 +26,7 @@ mysql_select_db('sql6139629');
 $pdf=new PDF();
 $pdf->AddPage();
 //First table: put all columns automatically
-$PDF_LOC="BILL_INVOICE_Room_".$rnum."_".date('d-M-y_h-i').".pdf";
+$PDF_LOC="BILL_INVOICE_Room_".$rnum."_".date('d-M-y_h-i-s').".pdf";
 $FILE_PATH="dbfile/".$PDF_LOC;
 $pdf->Table('select date,title,rate,qty,amount from bill_info');
 

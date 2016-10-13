@@ -44,10 +44,7 @@ require('utils.php');
 	$sparkrum_id=get_sparkroom_id($rnum);
 	
 	/*Generate PDF FOR Invoice*/
-	$filename=generate_bill_pdf($rnum);
-	
-	echo $filename;
-	echo $sparkrum_id;
+	$filename=generate_bill_pdf($rnum);	
 	
 	$Text="**Thanks For Visting SPMS You Current Payment Dues are Posted**";
 	
