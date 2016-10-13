@@ -46,12 +46,13 @@ require('utils.php');
 	/*Generate PDF FOR Invoice*/
 	$filename=generate_bill_pdf($rnum);	
 	
-	$Text="**Thanks For Visting SPMS You Current Payment Dues are Posted**";
+	$Text="**Accounts Department Update**<br>Please Find receipt which YOu Need to Pay <br> For Any Clarification Regaring Bill
+	 Please Ping us<br>Get well Soon !!<br>";
 	
 	/*Send File in Spark Room*/
 	send_attachment_in_spark_room($sparkrum_id,$Text,$filename);
 	
 	/*Generate Pdf of Bill and Post in Room*/
-	//header("location:billing_home.php");
+	header("location:billing_home.php");
   }				
 ?>

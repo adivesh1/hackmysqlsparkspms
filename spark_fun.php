@@ -225,7 +225,8 @@ $URL=curPageURL();
 
 $filename=$URL."/"."../"."dbfile/".$attachment;/*Creating http link*/
 
-$data = array(    "roomId" => $spark_room_title,   
+$data = array(    "roomId" => $spark_room_title, 
+                  "markdown" => $msg,
                   'files' => $filename     );  
 				  
 $url = "https://api.ciscospark.com/v1/messages";   
