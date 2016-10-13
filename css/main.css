@@ -1,0 +1,283 @@
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	width:803px;
+	background-color:#101f44;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block; 
+    color:#bee8b0; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+	background-color:#bee8b0; 
+	color:#101f44;
+	border-style:3d;
+	border-color:#b0c9f2;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+}
+
+#main{
+		width:auto;
+		height:auto;	
+		float:left;
+	}
+
+#header{
+		width:1000px;
+		height:150px;	
+		float:left;
+		background-color:white;
+		margin-left:292px;
+	}
+
+#logo{
+		width:150px;
+		height:150px;	
+		float:left;
+	}
+
+#middle{
+		width:700px;
+		height:150px;	
+		float:left;
+		background-color:white;
+	}
+	
+#title{
+		width:700px;
+		height:150px;	
+		float:left;
+		font-size:45px;
+		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		padding-left:10px;
+		padding-top:40px;
+		color:#4682B4;
+	}
+
+/* It will show user avatar and name if logged in*/	
+#user_div{
+		width:150px;
+		height:150px;	
+		float:left;
+		cursor:pointer;
+	}
+	
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	margin-top:150px;
+    display: none;
+    position: absolute;
+    background-color:#101f44;	
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+	
+/* Links inside the dropdown */
+.dropdown-content a {
+	color:#bee8b0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-size:18px;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #bee8b0; color:#101f44;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}	
+
+#user_icon_div{
+		width:100px;
+		height:100px;	
+		float:left;
+		margin-left:25px;
+		margin-top:10px;
+	}
+	
+#username_div{
+		width:150px;
+		height:30px;	
+		float:left;
+		margin-top:5px;
+		text-align:center;
+		line-height:30px;
+		font-size:18px;
+		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	
+#content{
+		width:1000px;
+		height:540px;	
+		float:left;
+		margin-left:234px;
+	}
+	
+#content_left{
+		height:540px;
+		width:250px;		
+		float:left;
+	}
+
+#ADMIN_OPTION
+{
+	height:250px;
+	width:180px;
+	position: relative;
+    left: -85px;
+	margin-left:10px;
+	margin-top:20px;
+}
+#back_icon{
+	height:70px;
+	width:70px;
+	background:red;
+	margin-left:90px;
+	margin-top:20px;
+}
+	
+#content_right{
+		height:540px;
+		width:747px;
+		float:left;
+		border-left-style: solid;
+		border-left: 2px solid #bee8b0;
+	}
+	
+.button{
+		height:30px;
+		width:150px; 
+		font-size:18px; 
+		background-color:#101f44; 
+		color:#bee8b0; 
+		margin-left:150px;
+		margin-top:40px;
+	}
+	
+.button:hover{ 
+		background-color:#bee8b0; 
+		color:#101f44;
+		border-style:3d;
+		border-color:#b0c9f2;
+	}
+	
+#login_form{
+		width:400px;
+		height:130px;	
+		float:left;
+		margin-left:300px;
+		margin-top:150px;
+		font-size:15px;
+		color:#b2f4e0;
+		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+
+#new_patient_form{
+	color:#b2f4e0;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+	
+.new_patient_field_div{
+		height:30px;
+		color:green;
+		width:360px;
+		text-align:center;
+		float:left;
+		margin-top:30px;
+}
+
+.new_patient_field_input{
+	height:20px;
+	width:auto;
+	background-color:#b2f4e0;
+}
+	
+#footer{
+		width:1000px;
+		height:50px;	
+		float:left;
+		background-color:white;
+		margin-left:292px;
+		line-height:50px;
+		font-size:12px;
+		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+#release_box{
+	width:230px;
+	height:90px;
+	margin-left:100px;
+	margin-top:220px;
+}
+#discharge_button{
+	width:230px;
+	height:70px;
+	margin-left:100px;
+	margin-top:200px;
+	background:green;
+	
+}
+.spark_room{
+		height:30px;
+		width:380px;
+		text-align:center;
+		float:left;
+		margin-top:30px;
+}
+.next_button{
+	height:30px;
+		width:150px; 
+		font-size:18px; 
+		background-color:#101f44; 
+		color:#bee8b0; 
+		margin-left:150px;
+		margin-top:40px;	
+}
+#myTable{
+	height:30px;
+		width:150px; 
+		font-size:18px;
+        text-align: center; 
+		color:#bee8b0; 
+		margin-top:20px;
+}
+#myTable2{
+		width:150px; 
+		font-size:18px; 
+		background-color:#101f44; 
+		color:#bee8b0; 
+}
+#mytable_cell{
+	width:150px; 
+}
