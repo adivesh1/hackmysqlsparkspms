@@ -222,12 +222,8 @@ function send_attachment_in_spark_room($spark_room_title,$msg,$attachment)
 {	
  
 $URL=curPageURL();
-echo $URL;
-echo "<br>";
 
-$filename=$URL."/"."dbfile/".$attachment;/*Creating http link*/
-
-echo $filename;
+$filename=$URL."/"."../"."dbfile/".$attachment;/*Creating http link*/
 
 $data = array(    "roomId" => $spark_room_title,   
                   'files' => $filename     );  
