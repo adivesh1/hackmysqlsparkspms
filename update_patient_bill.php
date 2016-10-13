@@ -46,7 +46,7 @@ require('utils.php');
 	/*Generate PDF FOR Invoice*/
 	$filename=generate_bill_pdf($rnum);	
 	
-	$Text="**Accounts Department Update**<br>Please Find receipt which YOu Need to Pay <br> For Any Clarification Regaring Bill
+	$Text="**Accounts Department Update**<br>Please Find receipt which You Need to Pay <br> For Any Clarification Regaring Bill
 	 Please Ping us<br>Get well Soon !!<br>";
 	
 	/*Send File in Spark Room*/
