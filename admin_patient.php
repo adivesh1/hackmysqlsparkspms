@@ -91,7 +91,29 @@ include 'utils.php';
 	}
 	
 	$conn->close();
-  }
+	
+	/*Update Initial Amount in Billing DB*/
+	$conn = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password);
+   
+   if ($conn->connect_error){
+	   die("Connection failed: " . $conn->connect_error);
+   }
+   $currdate=date('d-M-y_h-i');
+   $paticular="Initial Deposite";
+   
+   $sql ="INSERT INTO $mysql_database.bill_info(rnum,date,title,rate,qty,amount)VALUES('$room_number','$currdate','$paticular',
+	       '$paticular','$paticular','$paticular')";
+			
+	if($conn->query($sql) === TRUE){
+		echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+  $conn->close();
   
+  $Text="**Registration Department Update**<br>New Patient Is admitted<br>For Any Clarification Please Ping us<br>Get well Soon !!<br>";
+  send_smg_in_spark_room($spark_rid,$Text);
   header("location:admin_home.php");
+ }
 ?>
