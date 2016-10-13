@@ -163,53 +163,6 @@ if ( $status != 204 ) {
 		print $staus;
 	} 
  }
- /**********************************************************************************
- *    Function Name : get_spark_id
- *    Description : This function will get the spark id on spark room name
- *    Parameters  : Spark_room_name
- **********************************************************************************/
- function get_spark_id($spark_room_name){
-	 
-    $file_handle = fopen("dbfile/patient_information.db", "a");
-		while (!feof($file_handle)) {
-			$line = fgets($file_handle);
-			echo "HELLO".$line;
-			if(isset($line)){
-			$words= explode( ",", $line );
-				if($spark_room_name == $words[10]) {
-				// User authenticated correctly
-				$auth=true;
-				break;
-				}
-			}
-		}
-	fclose($file_handle);
-	if($auth){
-		return $words[11];
-	}		
- }
-/**********************************************************************************
- *    Function Name : get_membership_spark_id
- *    Description : This function will get the spark id on spark room name
- *    Parameters  : Spark_room_name
- **********************************************************************************/
- function get_membership_spark_id($spark_room_name){
-	 
-    $myfile = fopen("dbfile/sparkroom_information.db", "a");
-		while (!feof($myfile)) {
-			$line = fgets($myfile);
-			$words= explode( ",", $line );
-				if($spark_room_name == $words[0]) {
-				// User authenticated correctly
-				$auth=true;
-				break;
-				}
-		}
-	fclose($myfile);
-	if($auth){
-		return $words[2];
-	}		
- }
  /***************************************************************************									 *
  * Function to Send Message in Spark Room                                    *              
  *                                                                         *
@@ -283,7 +236,7 @@ curl_close($curl);$response = json_decode($json_response, true);
 if ( $status == 200 ) {  
  
  echo "File Send Successfully!!";
-// header("location:admin_home.php");
+     header("location:billing_home.php");
 }else{
 	die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));
 }	
