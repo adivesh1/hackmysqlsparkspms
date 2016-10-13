@@ -223,7 +223,7 @@ function send_attachment_in_spark_room($spark_room_title,$msg,$attachment)
  
 $URL=curPageURL();
 echo $URL;
-echo <br>
+echo <br>;
 
 $filename=$URL."/"."dbfile/".$attachment;/*Creating http link*/
 
