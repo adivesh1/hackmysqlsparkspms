@@ -169,10 +169,10 @@ if ( $status != 204 ) {
  ***************************************************************************/
 function send_smg_in_spark_room($spark_room_title,$msg)
 {
-	$comp_msg="**SPMS UPDATE**".$msg;
+	
   	$data = array(
 				'roomId' => $spark_room_title,
-				'markdown'=>$comp_msg,
+				'markdown'=>$msg,
 			  );
   
 $url = "https://api.ciscospark.com/v1/messages";    
