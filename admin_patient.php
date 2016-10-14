@@ -47,6 +47,10 @@ include 'utils.php';
   $room_number = strip_tags($room_number);
   $room_number = htmlspecialchars($room_number);
   
+  $amount_collection=trim($_POST['room_number']);
+  $amount_collection=strip_tags($room_number);
+  $amount_collection=htmlspecialchars($room_number);
+  
   /*Spark_room Name*/
   $spark_rname="SPMS"."_".$fname."_".$lname."_".$room_number;
   $spark_rid="";
@@ -102,7 +106,7 @@ include 'utils.php';
    $paticular="Initial Deposite";
    
    $sql ="INSERT INTO $mysql_database.bill_info(rnum,date,title,rate,qty,amount)VALUES('$room_number','$currdate','$paticular',
-	       '$paticular','$paticular','$paticular')";
+	       '$amount_collection','1','$amount_collection')";
 			
 	if($conn->query($sql) === TRUE){
 		echo "New record created successfully";
