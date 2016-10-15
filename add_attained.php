@@ -47,7 +47,7 @@
 			<form action="search_patient.php" method = 'post'>
 				<input class="button" type="submit" name = "Release Patient"value='Search Patient'></button></form>
 			<form action="" method = 'post'>
-				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attendant' DISABLE></button></form>
+				<input class="button" type="submit" name = "Add_New-Attained"value='Add Attendant' DISABLE></button></form>
 			</div>
 			</div>
 			<form action="add_in_spark.php" method="POST">
