@@ -87,26 +87,27 @@
 <!-- call php function for getting the detail-->
 
 <?php
-
-   $dbhost = 'sql6.freemysqlhosting.net';
-   $dbuser = 'sql6139629';
-   $dbpass = 'FKeMD1yudJ';
-   error_reporting(E_ALL ^ E_DEPRECATED);
-   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+			$dbhost = 'sql6.freemysqlhosting.net';
+			$dbuser = 'sql6139629';
+			$dbpass = 'FKeMD1yudJ';
+			error_reporting(E_ALL ^ E_DEPRECATED);
+			
+			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
    
-   if(! $conn ) {
-      die('Could not connect: ' . mysql_error());
-   }
-	$room_num=$_POST['room_num_d'];
+			if(! $conn ) {
+				die('Could not connect: ' . mysql_error());
+			}
+			$room_num=$_POST['room_num_d'];
       
-	 mysql_select_db('sql6139629');
-     $sql="SELECT test_name,Refvalue,units FROM sql6139629.lab_test_info where rnum='$room_num'";
+			mysql_select_db('sql6139629');
+			
+			$sql="SELECT test_name,Refvalue,units FROM sql6139629.lab_test_info where rnum='$room_num'";
 	 
 	 
-	 $result = mysql_query($sql);
-          If(mysql_num_rows($result)>0)
-          {
-            while($row=mysql_fetch_array($result))
+			$result = mysql_query($sql);
+			If(mysql_num_rows($result)>0)
+			{
+				while($row=mysql_fetch_array($result))
             { 
 		      $test_name=$row['test_name'];
 			  $Refvalue=$row['Refvalue'];
@@ -123,11 +124,10 @@
             }
           }
    mysql_close($conn);
-
 ?>
 		</table>
-			<form method="POST"  id="my_form" action="update_blood_test_result_in_table.php">
-				<input type="submit" class="button" value="Update Result">
+		    <form method='POST'  id='my_form' action='update_blood_test_result_in_table.php'>
+				<input type="submit" class="button" form="my_form" value="Update Result">
 			</form>
 	    </div><!-- Content Right-->
         </div><!-- Content Close-->		
