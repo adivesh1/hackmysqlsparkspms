@@ -326,3 +326,12 @@ ul.tab li a:focus, .active {
 	background-color:#101f44; 
 	color:#bee8b0; 
 }
+#attained{
+	margin-left:120px;
+	margin-top:70px;
+}
+.attained_rnum{
+		color:#bee8b0; 
+		margin-left:50px;
+		margin-top:40px;
+}
