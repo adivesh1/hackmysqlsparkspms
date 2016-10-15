@@ -3,7 +3,7 @@ require('geneate_blood_test_report_pdf.php');
 require('spark_fun.php');
 require('utils.php');
 
-  if(isset($_POST)==true && empty($_POST)==false){
+if(isset($_POST)==true && empty($_POST)==false){
 	$test_name = $_POST['test_name'];
 	$rnum= $_POST['rnum'];
 	$resvalue =$_POST['resvalue'];

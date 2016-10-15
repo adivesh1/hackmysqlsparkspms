@@ -15,7 +15,7 @@ if( isset($_POST['submit']) ){
 	
 $spark_rid="";
 
-$Text="**Registration Update**<br>A New Patient Attendant $attianed_email has Being Add<br>Get Well Soon !!";
+$Text="**Registration Update**<br>A New Patient Attendant $attianed_email has been added<br>Get Well Soon !!";
 
 $spark_rid=get_sparkroom_id($rnum);
 
