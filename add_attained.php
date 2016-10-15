@@ -47,20 +47,19 @@
 			<form action="search_patient.php" method = 'post'>
 				<input class="button" type="submit" name = "Release Patient"value='Search Patient'></button></form>
 			<form action="" method = 'post'>
-				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attained' DISABLE></button></form>
+				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attendant' DISABLE></button></form>
 			</div>
 			</div>
+			<form action="add_in_spark.php" method="POST">
 			<div id="content_right">
 			   <h1 style="color:#bee8b0;text-align:center; margin-top:70px"> Enter Attained Details<h1>
-			   <form action="add_in_spark.php" metho="POST">
 			   <div id = "attained">
-			      <input style="width:70px" class="attained_rnum"  type="text" name= "rnum" placeholder="Enter Room Number">
-				  <input style="width:300px" class="attained_rnum" type="email" name="attianed_email" placeholder="Enter Email ID"><br>
-				  <input class="button" type="submit" name="add_attained" value="Add Attained">	 
+			      <input style="width:70px" class="attained_rnum"  type="text" name= 'rnum' placeholder="Enter Room Number">
+				  <input style="width:300px" class="attained_rnum" type="text" name='attianed_email' placeholder="Enter Email ID"><br>
+				  <input class="button" type="submit" name ='submit' value="Add Attendant">	 
 			   </div>
-			  </form>
 			</div>
-			
+		  </form>
 		</div>	
 		<div id="footer">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;	Copyright SPMS 2016. All rights reserved.

@@ -42,9 +42,11 @@ require_once('auth.php');
 			
 			<div id="ADMIN_OPTION">
 			<form action="new_patient.php" method = 'post'>
-				<input class="button" type="submit" name = "register_patient"value='New Patient'></button></form>
-			<form action="" method = 'post'>
-				<input class="button" type="submit" value='Patient Info'disabled ></button></form>
+				<input class="button" type="submit" name = "register_patient"value='Admit Patient'></button></form>
+			<form action="search_patient.php" method = 'post'>
+				<input class="button" type="submit" name = "Release Patient"value='Search Patient' DISABLE></button></form>
+			<form action="add_attained.php" method = 'post'>
+				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attained'></button></form>
 			</div>
 			</div>
 			
