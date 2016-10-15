@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pathology Home</title>
+		<title>Update Test Report</title>
 		<script type="text/javascript" src="javascript/script.js"></script>
 		<link rel="stylesheet" href="css/main.css"/>
 		<style>body{background:black url(images/img_bg.jpg) no-repeat center top fixed}</style>
@@ -35,6 +35,12 @@
 		
 		<div id="content">
 			<div id="content_left">
+			
+			<!-- Home Page Link for pathology pages -->
+			<div id="home_icon">
+			<a href="pathology_home.php"><img src="images/home_icon.jpg"></img></a>
+			</div>
+			
 			<div id="ADMIN_OPTION">
 			<form action="get_test_req.php" method = 'post'>
 				<input class="button" type="submit" name = "get_report_req"value='Get Report Req'></button></form>

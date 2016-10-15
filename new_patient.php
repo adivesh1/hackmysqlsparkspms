@@ -34,6 +34,12 @@
 		</div>
 				<div id="content">
 			<div id="content_left">
+			
+			<!-- Home Page Link for admin pages -->
+			<div id="home_icon">
+			<a href="admin_home.php"><img src="images/home_icon.jpg"></img></a>
+			</div>
+			
 			<div id="ADMIN_OPTION">
 			<form action="" method = 'post'>
 				<input class="button" type="submit" name = "register_patient"value='New Patient'disabled></button></form>

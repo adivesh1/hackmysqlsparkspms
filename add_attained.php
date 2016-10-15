@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Take Test Request</title>
+		<title>Admin Home</title>
 		<script type="text/javascript" src="javascript/script.js"></script>
 		<link rel="stylesheet" href="css/main.css"/>
 		<style>body{background:black url(images/img_bg.jpg) no-repeat center top fixed}</style>
@@ -25,7 +25,7 @@
 				</div>
 				
 				<div id="username_div">
-					Hi Pathologist
+					Hi Admin
 				</div>
 				<div class="dropdown-content">
 					<a href="/index.php">Logout</a>
@@ -36,27 +36,31 @@
 		<div id="content">
 			<div id="content_left">
 			
-			<!-- Home Page Link for pathology pages -->
+			<!-- Home Page Link for admin pages -->
 			<div id="home_icon">
-			<a href="pathology_home.php"><img src="images/home_icon.jpg"></img></a>
+			<a href="admin_home.php"><img src="images/home_icon.jpg"></img></a>
 			</div>
-						
+			
 			<div id="ADMIN_OPTION">
+			<form action="new_patient.php" method = 'post'>
+				<input class="button" type="submit" name = "register_patient"value='Admit Patient'></button></form>
+			<form action="search_patient.php" method = 'post'>
+				<input class="button" type="submit" name = "Release Patient"value='Search Patient'></button></form>
 			<form action="" method = 'post'>
-				<input class="button" type="submit" name = "get_report_req"value='Get Report Req' DISBALE></button></form>
-			<form action="update_test_result.php" method = 'post'>
-				<input class="button" type="submit" name = "update_report"value='Update Report'></button></form>
+				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attained' DISABLE></button></form>
 			</div>
 			</div>
 			<div id="content_right">
-				<div id="release_box">
-				  <form action="get_blood_repot_req_details.php" method="post">
-				    <div style="height:30px; width:400px; text-align:left;"><font color="white">PATIENT ROOM NUMBER 
-					</font> <input style="height:20px; width:auto; background-color:#b2f4e0;" type="text" name="room_num_d"
-              					id="room_num_id" required></div>
-				  <input class="button" type="submit" name = "submit" value='Get Detail' ></button></form>
-				</div>
+			   <h1 style="color:#bee8b0;text-align:center; margin-top:70px"> Enter Attained Details<h1>
+			   <form action="add_in_spark.php" metho="POST">
+			   <div id = "attained">
+			      <input style="width:70px" class="attained_rnum"  type="text" name= "rnum" placeholder="Enter Room Number">
+				  <input style="width:300px" class="attained_rnum" type="email" name="attianed_email" placeholder="Enter Email ID"><br>
+				  <input class="button" type="submit" name="add_attained" value="Add Attained">	 
+			   </div>
+			  </form>
 			</div>
+			
 		</div>	
 		<div id="footer">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;	Copyright SPMS 2016. All rights reserved.

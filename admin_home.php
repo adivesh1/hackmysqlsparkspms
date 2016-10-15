@@ -35,11 +35,19 @@
 		
 		<div id="content">
 			<div id="content_left">
+			
+			<!-- Home Page Link for admin pages -->
+			<div id="home_icon">
+			<a href="admin_home.php"><img src="images/home_icon.jpg"></img></a>
+			</div>
+			
 			<div id="ADMIN_OPTION">
 			<form action="new_patient.php" method = 'post'>
 				<input class="button" type="submit" name = "register_patient"value='Admit Patient'></button></form>
 			<form action="search_patient.php" method = 'post'>
 				<input class="button" type="submit" name = "Release Patient"value='Search Patient'></button></form>
+			<form action="add_attained.php" method = 'post'>
+				<input class="button" type="submit" name = "Add_New-Attained"value='Add New Attained'></button></form>
 			</div>
 			</div>
 			<div id="content_right"></div>

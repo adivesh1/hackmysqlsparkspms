@@ -35,6 +35,12 @@
 		
 		<div id="content">
 			<div id="content_left">
+			
+			<!-- Home Page Link for account pages -->
+			<div id="home_icon">
+			<a href="billing_home.php"><img src="images/home_icon.jpg"></img></a>
+			</div>
+			
 			<div id="ADMIN_OPTION">
 			<form action="serach_bill.php" method = 'post'>
 				<input class="button" type="submit" name = "get_patient_info"value='Prep Discharge'></button></form>		

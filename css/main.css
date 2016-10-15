@@ -151,6 +151,12 @@ ul.tab li a:focus, .active {
 		width:250px;		
 		float:left;
 	}
+#home_icon {
+	height:60px;
+	width:60px;
+	margin-left:120px;
+	margin-top:40px;
+}
 
 #ADMIN_OPTION
 {
