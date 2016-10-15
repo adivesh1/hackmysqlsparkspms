@@ -127,7 +127,7 @@
 ?>
 		</table>
 		    <form method='POST'  id='my_form' action='update_blood_test_result_in_table.php'>
-				<input type="submit" class="button" form="my_form" value="Update Result">
+				<input type="submit" class="button" form="my_form" name="update_button" value="Update Result">
 			</form>
 	    </div><!-- Content Right-->
         </div><!-- Content Close-->		
