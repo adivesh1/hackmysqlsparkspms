@@ -53,9 +53,10 @@ function get_doctor_email($doctor){
 
 function get_sparkroom_id($rnum){
 	
-	$dbhost = 'sql6.freemysqlhosting.net';
+   $dbhost = 'sql6.freemysqlhosting.net';
    $dbuser = 'sql6139629';
    $dbpass = 'FKeMD1yudJ';
+   $spark_rid="";
    error_reporting(E_ALL ^ E_DEPRECATED);
    $conn = mysql_connect($dbhost, $dbuser, $dbpass);
    
@@ -65,6 +66,7 @@ function get_sparkroom_id($rnum){
    $sql = "SELECT spark_rid FROM patient_info WHERE rnum='$rnum'";
    
    mysql_select_db('sql6139629');
+
    $retval = mysql_query( $sql, $conn );
    if(! $retval ) {
       die('Could not get data: ' . mysql_error());

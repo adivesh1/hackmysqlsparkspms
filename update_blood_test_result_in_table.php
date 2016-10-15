@@ -1,15 +1,12 @@
 <?php
-
-require('generate_bill_pdf.php');
+require('geneate_blood_test_report_pdf.php');
 require('spark_fun.php');
 require('utils.php');
 
   if(isset($_POST)==true && empty($_POST)==false){
-	$paticular = $_POST['paticular'];
-	$rate = $_POST['rate'];
-	$qty = $_POST['qty'];
-	$total = $_POST['total'];
+	$test_name = $_POST['test_name'];
 	$rnum= $_POST['rnum'];
+	$resvalue =$_POST['resvalue'];
 	
 	/*Insert the Billing Info in Billing Database*/
 	/*Connect Mysql DB*/
@@ -21,18 +18,15 @@ require('utils.php');
 	$conn = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password);
    
    /*Getting total Billing Info*/
-	foreach($paticular as $a => $b){
+	foreach($test_name as $a => $b){
 		$a+1;
-	
-	$currdate=date('d-M-y_h-i');
    
 	if ($conn->connect_error){
 		die("Connection failed: " . $conn->connect_error);
 	}
 	/*Query to Insert Patient Information*/
-	$sql = "INSERT INTO $mysql_database.bill_info(rnum,date,title,rate,qty,amount)VALUES('$rnum','$currdate','$paticular[$a]',
-		'$rate[$a]','$qty[$a]','$total[$a]')";
-
+	$sql = "UPDATE $mysql_database.lab_test_info set resvalue='$resvalue[$a]' where rnum='$rnum' AND test_name='$test_name[$a]'";
+	//echo "Hello".$sql;
 	if($conn->query($sql) === TRUE){
 		echo "New record created successfully";
 	} else {
@@ -44,15 +38,14 @@ require('utils.php');
 	$sparkrum_id=get_sparkroom_id($rnum);
 	
 	/*Generate PDF FOR Invoice*/
-	$filename=generate_bill_pdf($rnum);	
+ 	$filename=generate_blood_test_pdf($rnum);	
 	
-	$Text="**Accounts Department Update**<br>Please Find receipt which You Need to Pay <br> For Any Clarification Regaring Bill
-	 Please Ping us<br>Get well Soon !!<br>";
+	$Text="**Pathology Department Update**<br>Please find the Blood Test Report<br>For Any Clarification Regaring Report<br>Please Ping us<br>Get well Soon !!<br>";
 	
 	/*Send File in Spark Room*/
 	send_attachment_in_spark_room($sparkrum_id,$Text,$filename);
 	
 	/*Generate Pdf of Bill and Post in Room*/
-	header("location:billing_home.php");
-  }				
+    header("location:pathology_home.php");
+  }		
 ?>

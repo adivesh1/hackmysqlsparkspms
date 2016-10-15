@@ -50,10 +50,13 @@ session_write_close();
 if($username == "admin"){
 	header("location: admin_home.php");
 }else if($username == "lab"){
+	header("location: pathology_home.php");
+}else if($username == "acc"){
 	header("location: billing_home.php");
 }else{
 	header("location: index.php");
 }
+
 exit();
 }else {
 //Login failed
