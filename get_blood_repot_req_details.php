@@ -71,8 +71,8 @@
 			<div id="content_right">
         <div id="schedule_test_box">
 		    <form action="pathology_schedule_blood_collection_time.php" method="post">
-		    Blood Collection Time : <input style="width=50px" name="schedule_time">
-			Room Number : <input style="width=10px" name="rnum">
+		    Blood Collection Time : <input type='time' style="width=50px" name="schedule_time">
+			Room Number : <input style="width=10px" name="rnum" placeholder="Enter Room Number">
 			<input class="schedule_button" type="submit" name="time_schedule" value="Schedule Test">
 			</form>
 		</div>
