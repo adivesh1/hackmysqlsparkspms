@@ -37,7 +37,7 @@
 			<div id="content_left">
 			<div id="ADMIN_OPTION">
 			<form action="new_patient.php" method = 'post'>
-				<input class="button" type="submit" name = "register_patient"value='Admint Patient'></button></form>
+				<input class="button" type="submit" name = "register_patient"value='Admit Patient'></button></form>
 			<form action="search_patient.php" method = 'post'>
 				<input class="button" type="submit" name = "Release Patient"value='Search Patient'></button></form>
 			</div>

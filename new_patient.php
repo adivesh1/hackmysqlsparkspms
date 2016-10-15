@@ -44,12 +44,12 @@
 		<form method = "post" action="admin_patient.php">	
 		<div id="content_right">
 			   <ul class="tab">
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'new_patient_form1')">Personal Detail</a></li>
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'new_patient_form2')">Doctor</a></li>
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'new_patient_form3')">Room Number</a></li>
-					<li><a href="#" class="tablinks" onclick="openCity(event, 'new_patient_form4')">Amount Colloction</a></li>
+					<li><a href="#" style="background-color:#ccc; color:#101f44;" id="person_detail_tab" class="tablinks" onclick="openCity(event, 'new_patient_form1', 'person_detail_tab')">Personal Detail</a></li>
+					<li><a href="#" id="doctor_tab" class="tablinks" onclick="openCity(event, 'new_patient_form2', 'doctor_tab')">Doctor</a></li>
+					<li><a href="#" id="room_number_tab" class="tablinks" onclick="openCity(event, 'new_patient_form3', 'room_number_tab')">Room Number</a></li>
+					<li><a href="#" id="amount_tab" class="tablinks" onclick="openCity(event, 'new_patient_form4', 'amount_tab')">Amount Colloction</a></li>
 			   </ul>
-			<div class = "tabcontent" id="new_patient_form1">
+			<div style="display:block;" class="tabcontent" id="new_patient_form1">
 						<div class="new_patient_field_div">
 							First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="new_patient_field_input" type="text" name="fname" value="" required />
 						</div>				
@@ -68,7 +68,7 @@
 						<div class="new_patient_field_div">
 							Address Line 2:&nbsp;&nbsp;&nbsp;&nbsp;<input class="new_patient_field_input" type="text" name="address2" value="" required />
 						</div>
-                        <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form2')">						
+                        <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form2', 'doctor_tab')">						
 				</div>
 				
 				<div class = "tabcontent" id="new_patient_form2">				
@@ -95,8 +95,8 @@
 								<option value="Neurology">
 							</datalist>
 						</div>
-						 <input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form1')">	
-						 <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form3')">	
+						 <input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form1', 'person_detail_tab')">	
+						 <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form3', 'room_number_tab')">	
 				</div>
 				
 				<div class = "tabcontent" id="new_patient_form3">
@@ -113,8 +113,8 @@
 				    <div class="new_patient_field_div">
 							Room Number:&nbsp;&nbsp;<input class="new_patient_field_input" type="number" min="0" name="room_number" id="ROOM_NUMBER" value="" required />
 					</div>
-					<input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form2')">	
-                    <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form4')">						
+					<input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form2', 'doctor_tab')">	
+                    <input class = "next_button" type="button" value="Next" onclick="openCity(event, 'new_patient_form4', 'amount_tab')">						
 				</div>
 				
 				<div class = "tabcontent" id="new_patient_form4">
@@ -124,12 +124,12 @@
 					<div class="new_patient_field_div">
 
 					</div>
-					<input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form3')">	
+					<input class = "next_button" type="button" value="Back" onclick="openCity(event, 'new_patient_form3', 'room_number_tab')">	
 					&nbsp;&nbsp;&nbsp;&nbsp;<input style="margin-top:100px; margin-left:100px;" class="button" type="submit" value="Admit Patient" name="admin_patient" value="" required />		
 				</div>
             </div><!-- Complete Div-->
             </form>			
-</div><!-- Before Body div>
+</div><!-- Before Body div-->
 		<div id="footer">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;	Copyright SPMS 2016. All rights reserved.
 		</div>

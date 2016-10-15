@@ -32,6 +32,7 @@ ul.tab li a:hover {
 /* Create an active/current tablink class */
 ul.tab li a:focus, .active {
     background-color: #ccc;
+	color:#101f44;
 }
 
 /* Style the tab content */
@@ -211,7 +212,7 @@ ul.tab li a:focus, .active {
 	
 .new_patient_field_div{
 		height:30px;
-		color:green;
+		color:#b2f4e0;
 		width:360px;
 		text-align:center;
 		float:left;
@@ -278,6 +279,39 @@ ul.tab li a:focus, .active {
 		background-color:#101f44; 
 		color:#bee8b0; 
 }
+#BloodTest_table{
+		width:150px; 
+		font-size:18px; 
+		background-color:#101f44; 
+		margin-left:120px;
+		color:#bee8b0; 
+}
 #mytable_cell{
 	width:150px; 
 }
+#report_req_table{
+	background-color:#101f44; 
+		color:#bee8b0;
+}
+#test_data{
+	background-color:#FFFFFF; 
+		color:#000000;
+}
+#schedule_test_box{
+		margin-left:10px;
+		margin-top:20px;
+		color:#bee8b0;
+}
+
+.schedule_button{
+		font-size:18px; 
+		background-color:#101f44; 
+		color:#bee8b0; 
+	}
+	
+.schedule_button:hover{ 
+		background-color:#bee8b0; 
+		color:#101f44;
+		border-style:3d;
+		border-color:#b0c9f2;
+	}

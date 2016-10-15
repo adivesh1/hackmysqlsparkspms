@@ -1,4 +1,7 @@
-function openCity(evt, cityName) {
+function openCity(evt, cityName, tabTitle) 
+{
+	//Validate data first
+	
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -16,6 +19,21 @@ function openCity(evt, cityName) {
 
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(cityName).style.display = "block";
+	//Changes all focus
+	document.getElementById("person_detail_tab").style.backgroundColor = "#101f44";
+	document.getElementById("person_detail_tab").style.color = "#bee8b0";
+	
+	document.getElementById("doctor_tab").style.backgroundColor = "#101f44";
+	document.getElementById("doctor_tab").style.color = "#bee8b0";
+	
+	document.getElementById("room_number_tab").style.backgroundColor = "#101f44";
+	document.getElementById("room_number_tab").style.color = "#bee8b0";
+	
+	document.getElementById("amount_tab").style.backgroundColor = "#101f44";
+	document.getElementById("amount_tab").style.color = "#bee8b0";
+	
+	document.getElementById(tabTitle).style.backgroundColor = "#ccc";
+	document.getElementById(tabTitle).style.color = "#101f44";
     evt.currentTarget.className += " active";
 }
 
