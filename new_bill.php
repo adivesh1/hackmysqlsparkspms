@@ -50,16 +50,16 @@
 				<table class="form" border="1">
                     <tr>
 						<td>
-							<input style="background-color:#002080;text-align:center" type="text" required="required" name="BX_NAME[]" value="Particular Name" size="30" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" type="text" required="required" name="BX_NAME[]" value="Particular Name" size="30" style="text-align: center" READONLY>
 						 </td>
 						 <td>
-							<input style="background-color:#002080;text-align:center" type="text" required="required" class="small"  value="Rate" name="BX_age[]" size="5" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" type="text" required="required" class="small"  value="Rate" name="BX_age[]" size="5" style="text-align: center" READONLY>
 					     </td>
 						 <td>
-							<input style="background-color:#002080;text-align:center" type="text" id="BX_gender" name="BX_gender" value="Qty" required="required" size="5" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" type="text" id="BX_gender" name="BX_gender" value="Qty" required="required" size="5" style="text-align: center" READONLY>
 						 </td>
 						 <td>
-							<input style="background-color:#002080;text-align:center" id="BX_birth" name="BX_birth" value="Total" required="required" size="5" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" id="BX_birth" name="BX_birth" value="Total" required="required" size="5" style="text-align: center" READONLY>
 						 </td>
 						 <td><input type="text" name="rnum" size="19" placeholder="EnterRoomNumber" Required ></td>
                     </tr>

@@ -48,12 +48,12 @@
 			 <h1 style="text-align:center"><font color="#adebeb"> Patient Blood Billing System</font></h1>
 			 <div id="BloodTest_table">
 				<table class="form" border="1">
-                    <tr>
+                    <tr class="row">
 						<td>
-							<input style="background-color:#002080;text-align:center" type="text" required="required" name="BX_NAME[]" value="Blood Test Name" size="30" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" type="text" required="required" name="BX_NAME[]" value="Blood Test Name" size="30" style="text-align: center" READONLY>
 						 </td>
 						 <td>
-							<input style="background-color:#002080;text-align:center" type="text" required="required" class="small"  value="Amount" name="BX_age[]" size="5" style="text-align: center" READONLY>
+							<input style="background-color:#101f44;color:#bee8b0;text-align:center" type="text" required="required" class="small"  value="Amount" name="BX_age[]" size="5" style="text-align: center" READONLY>
 					     </td>
 						 <td><input type="text" name="rnum" size="19" placeholder="EnterRoomNumber" Required ></td>
                     </tr>
@@ -61,7 +61,7 @@
 			   </div>	
 			   <div id="BloodTest_table">
                <table  id="dataTable" class="form" border="1">
-                    <tr>
+                    <tr class="row">
 						<td>
 							<input type="text" required="required" name="paticular[]" size="30">
 						 </td>
